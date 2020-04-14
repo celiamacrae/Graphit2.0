@@ -21,53 +21,6 @@ class SingleChart extends React.Component {
         <Grid id="sing" item sm={10}>
           <OutputGraph graphType={this.props.graph.type[0]} new={false} />
         </Grid>
-
-        {/* <div id='singleout'>
-          {this.props.graph.type[0] === 'pie' ? (
-            <PieChartComponent
-              avg={false}
-              graphtype={this.props.graph.type[0]}
-              name={this.props.graph.name}
-            />
-          ) : this.props.graph.type[0] === 'avg-pie' ? (
-            <PieChartComponent
-              avg={true}
-              graphtype={this.props.graph.type[0]}
-              type={this.props.graphtype}
-            />
-          ) : this.props.graph.type[0] === 'bar' ? (
-            <BarGraphComponent
-              avg={false}
-              graphtype={this.props.graph.type[0]}
-              type={this.props.graphtype}
-            />
-          ) : this.props.graph.type[0] === 'avg-bar' ? (
-            <BarGraphComponent
-              avg={true}
-              graphtype={this.props.graph.type[0]}
-              type={this.props.graphtype}
-            />
-          ) : this.props.graph.type[0] === 'line' ? (
-            <LineChart
-              avg={false}
-              graphtype={this.props.graph.type[0]}
-              type={this.props.graphtype}
-            />
-          ) : this.props.graph.type[0] === 'avg-line' ? (
-            <LineChart
-              avg={true}
-              graphtype={this.props.graph.type[0]}
-              type={this.props.graphtype}
-            />
-          ) : this.props.graph.type[0] === 'scatter' ? (
-            <Scatterplot
-              graphtype={this.props.graph.type[0]}
-              type={this.props.graphtype}
-            />
-          ) : (
-            <div />
-          )}
-        </div> */}
       </div>
     )
   }

@@ -23,7 +23,7 @@ Graphit was built by a team of 4 software engineering students as part of the im
 ```
 
 ```
-Create your own account or log in with this demo account:
+Create your own account or log in with this demo account :
 - email: cody@gmail.com
 - password: 123
 ```

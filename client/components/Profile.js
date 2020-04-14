@@ -15,7 +15,7 @@ class Profile extends Component {
       <div className="page">
         <Grid item className="header" sm={12}>
           <Logo />
-          <h2>Choose a graph to view</h2>
+          <h2>{this.props.user.firstName}, choose a graph to view:</h2>
         </Grid>
         <div className="all-graphs">
           {/* <div className="personal-info">
@@ -34,9 +34,6 @@ class Profile extends Component {
                       <p className="graph-name">{chart.name}</p>
                     </div>
                   </Link>
-                  {/* <Link to={'/single/' + chart.id}>
-
-                </Link> */}
                 </div>
               </div>
             )

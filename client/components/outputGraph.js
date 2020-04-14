@@ -111,9 +111,16 @@ class OutputGraph extends React.Component {
             {this.renderGraph(this.props.graphType, this.state.open)}
           </Modal>
         </Grid>
-        <Grid item>
-          <SaveButtons saveAsPDF={this.handleOpen} saveGraph={this.saveGraph} />
-        </Grid>
+
+        {this.props.new === true && (
+          <Grid item>
+            <SaveButtons
+              saveAsPDF={this.handleOpen}
+              saveGraph={this.saveGraph}
+            />
+          </Grid>
+        )}
+
         <Grid item>
           {this.state.savedGraph === true && (
             <SaveGraph

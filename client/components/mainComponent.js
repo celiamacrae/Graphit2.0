@@ -1,11 +1,5 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {columnData} from '../store/data'
-import html2canvas from 'html2canvas'
-import BarGraphComponent from './bar'
-import PieChartComponent from './pie'
-import LineChart from './line'
-import Scatterplot from './scatterplots'
 import {Grid} from '@material-ui/core'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {
@@ -74,7 +68,10 @@ class MainComponent extends Component {
           </button>
         </Grid>
         <Grid item sm={10}>
-          <OutputGraph graphType={this.props.graph.type[this.state.counter]} />
+          <OutputGraph
+            graphType={this.props.graph.type[this.state.counter]}
+            new={true}
+          />
         </Grid>
         <Grid item>
           <button

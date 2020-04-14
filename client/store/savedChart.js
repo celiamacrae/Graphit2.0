@@ -83,7 +83,8 @@ export const getSingleChart = chartId => async dispatch => {
     }
 
     dispatch(saved(data))
-    store.dispatch(gotGraph(data))
+    // store.dispatch(gotGraph(data))
+    dispatch(gotGraph(data))
   } catch (error) {
     console.error(error)
   }

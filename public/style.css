@@ -19,16 +19,15 @@ label {
   display: block;
 }
 
-/*
-nav a {
-  display: inline-block;
-  margin: 1em;
+#singleout {
+  display: flex;
+  justify-content: center;
+  /* background-color:white; */
 }
-
-form div {
-  margin: 1em;
-  display: inline-block;
-} */
+#sing {
+  background-color: white;
+  padding: 10px;
+}
 
 /* navbar */
 
@@ -130,21 +129,17 @@ h3 {
 }
 
 .modal .fullscreen {
-  background-color: white;
+  /* background-color: white; */
+  background-color: pink;
   margin: 0 5%;
 }
 
-/* .page {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-} */
-
+/*PROFILE */
 .all-graphs {
   display: flex;
   flex-direction: row;
-  /* align-content: space-between; */
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .all-graphs-single {
@@ -152,43 +147,22 @@ h3 {
   border-style: solid;
   margin: 0;
   border-width: 1px;
+  border-radius: 10%;
   background-color: white;
   padding: 10px;
   height: 150px;
   width: 150px;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  /* align-content: space-between; */
-  /* display: flex;
-
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: start;
-
-  padding: 10px; */
-}
-.chart-img {
-  width: 60px;
   margin: 10px;
 }
-/* .personal-info {
-  display: flex;
-  border-style: solid;
-  border-width: 1px;
-  flex-direction: column;
-  align-items: center;
-}
-.photo {
-  width: 130px;
-}
 .chart-img {
-  width: 30px;
+  width: 80px;
   margin: 10px;
+  align-self: center;
+  justify-self: center;
 }
 .graph-name {
   align-self: center;
+  justify-content: center;
 }
 
 /* form */

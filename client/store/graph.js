@@ -46,7 +46,7 @@ export const saveAsPDF = () => {
       const pdfWidth = pdf.internal.pageSize.getWidth()
       const pdfHeight = imgProps.height * pdfWidth / imgProps.width
       pdf.addImage(imgData, 15, 30, pdfWidth - 30, pdfHeight)
-      pdf.save('test.pdf')
+      pdf.save('GraphIt.pdf')
     })
     .catch(err => console.log(err.message))
 }

@@ -7,6 +7,8 @@ import BarGraphComponent from './bar'
 import PieChartComponent from './pie'
 import LineChart from './line'
 import Scatterplot from './scatterplots'
+import OutputGraph from './outputGraph'
+import {Grid} from '@material-ui/core'
 
 class SingleChart extends React.Component {
   componentDidMount() {
@@ -15,8 +17,12 @@ class SingleChart extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>
+      <div id="singleout">
+        <Grid id="sing" item sm={10}>
+          <OutputGraph graphType={this.props.graph.type[0]} new={false} />
+        </Grid>
+
+        {/* <div id='singleout'>
           {this.props.graph.type[0] === 'pie' ? (
             <PieChartComponent
               avg={false}
@@ -61,7 +67,7 @@ class SingleChart extends React.Component {
           ) : (
             <div />
           )}
-        </div>
+        </div> */}
       </div>
     )
   }

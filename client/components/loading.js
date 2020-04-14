@@ -13,7 +13,7 @@ export default class Loading extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({done: true}), 1200)
+    setTimeout(() => this.setState({done: true}), 600)
   }
 
   render() {

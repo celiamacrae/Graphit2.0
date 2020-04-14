@@ -157,8 +157,12 @@ h3 {
 }
 
 .chart-img {
-  width: 80px;
+  width: 60px;
   margin: 10px;
+}
+
+.graph-name {
+  text-align: center;
 }
 
 /* form */

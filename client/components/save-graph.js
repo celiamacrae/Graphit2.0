@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {Redirect} from 'react-router-dom'
+// import {Redirect} from 'react-router-dom'
 import {saveChart} from '../store/savedChart'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 import history from '../history'
+import {Grid} from '@material-ui/core'
 
 class SaveGraph extends Component {
   constructor(props) {
@@ -32,18 +33,28 @@ class SaveGraph extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.submitHandle}>
-          <label htmlFor="name">Enter Graph Name to Save</label>
-          <input
-            onChange={this.changeHandle}
-            type="text"
-            name="name"
-            value={this.state.name}
-          />
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+      <Grid
+        className="saveButtons"
+        container
+        justify="center"
+        alignItems="center"
+        spacing={2}
+      >
+        <Grid item>
+          <div>
+            <form onSubmit={this.submitHandle}>
+              <label htmlFor="name">Enter Graph Name to Save</label>
+              <input
+                onChange={this.changeHandle}
+                type="text"
+                name="name"
+                value={this.state.name}
+              />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </Grid>
+      </Grid>
     )
   }
 }

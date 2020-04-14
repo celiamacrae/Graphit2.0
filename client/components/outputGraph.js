@@ -121,15 +121,15 @@ class OutputGraph extends React.Component {
           </Grid>
         )}
 
-        <Grid item>
-          {this.state.savedGraph === true && (
+        {this.state.savedGraph === true && (
+          <Grid item>
             <SaveGraph
               type={this.props.graphType}
               columnData={this.props.graph.data}
               columns={this.props.graph.columns}
             />
-          )}
-        </Grid>
+          </Grid>
+        )}
       </Grid>
     )
   }

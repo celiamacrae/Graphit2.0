@@ -129,8 +129,7 @@ h3 {
 }
 
 .modal .fullscreen {
-  /* background-color: white; */
-  background-color: pink;
+  background-color: white;
   margin: 0 5%;
 }
 
@@ -195,4 +194,11 @@ h3 {
   left: 0px;
   width: 100%;
   z-index: -100;
+}
+
+/*ORGANIZE THIS LATER*/
+
+#savegraphbutton {
+  justify-self: center;
+  align-items: center;
 }

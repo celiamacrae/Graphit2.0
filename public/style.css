@@ -143,6 +143,8 @@ h3 {
 
 .all-graphs-single {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   border-style: solid;
   margin: 0;
   border-width: 1px;
@@ -153,15 +155,10 @@ h3 {
   width: 150px;
   margin: 10px;
 }
+
 .chart-img {
   width: 80px;
   margin: 10px;
-  align-self: center;
-  justify-self: center;
-}
-.graph-name {
-  align-self: center;
-  justify-content: center;
 }
 
 /* form */

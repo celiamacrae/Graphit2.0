@@ -18,20 +18,18 @@ class Profile extends Component {
           <h2>{this.props.user.firstName}, choose a graph to view:</h2>
         </Grid>
         <div className="all-graphs">
-          {/* <div className="personal-info">
-            <img className="photo" src="/default-profile-with-dog.png" />
-            <h4>{this.props.user.firstName}</h4>
-          </div> */}
           {this.props.savedChart.myCharts.map(chart => {
             return (
               <div key={chart.id}>
-                <div className="all-graphs-single">
+                <div>
                   <Link to={'/single/' + chart.id}>
-                    <div>
-                      <img className="chart-img" src={chart.imageURL} />
-                    </div>
-                    <div>
-                      <p className="graph-name">{chart.name}</p>
+                    <div className="all-graphs-single">
+                      <div>
+                        <img className="chart-img" src={chart.imageURL} />
+                      </div>
+                      <div>
+                        <p className="graph-name">{chart.name}</p>
+                      </div>
                     </div>
                   </Link>
                 </div>

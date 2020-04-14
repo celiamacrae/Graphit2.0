@@ -8,8 +8,6 @@ import Scatterplot from './scatterplots'
 import SaveGraph from './save-graph'
 import SaveButtons from './saveButtons'
 import SaveButtons2 from './buttons2'
-// import html2canvas from 'html2canvas'
-// const pdfConverter = require('jspdf')
 
 class OutputGraph extends React.Component {
   constructor() {

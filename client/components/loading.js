@@ -2,7 +2,7 @@ import React from 'react'
 import {EatLoading} from 'react-loadingg'
 import MainComponent from '../components/mainComponent'
 import {Paper} from '@material-ui/core'
-import Logo from './logo'
+// import Logo from './logo'
 
 export default class Loading extends React.Component {
   constructor(props) {

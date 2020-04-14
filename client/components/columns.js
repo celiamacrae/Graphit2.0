@@ -18,7 +18,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faChevronLeft} from '@fortawesome/free-solid-svg-icons'
 import Submit from './submit'
 import MainComponent from './mainComponent'
-import {EatLoading} from 'react-loadingg'
+// import {EatLoading} from 'react-loadingg'
 import Loading from './loading'
 
 class Columns extends React.Component {

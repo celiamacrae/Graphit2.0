@@ -7,6 +7,7 @@ import LineChart from './line'
 import Scatterplot from './scatterplots'
 import SaveGraph from './save-graph'
 import SaveButtons from './saveButtons'
+import SaveButtons2 from './buttons2'
 import html2canvas from 'html2canvas'
 const pdfConverter = require('jspdf')
 
@@ -112,9 +113,16 @@ class OutputGraph extends React.Component {
           </Modal>
         </Grid>
 
-        {this.props.new === true && (
+        {this.props.new === true ? (
           <Grid item>
             <SaveButtons
+              saveAsPDF={this.handleOpen}
+              saveGraph={this.saveGraph}
+            />
+          </Grid>
+        ) : (
+          <Grid item>
+            <SaveButtons2
               saveAsPDF={this.handleOpen}
               saveGraph={this.saveGraph}
             />

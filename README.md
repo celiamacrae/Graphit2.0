@@ -22,6 +22,12 @@ Graphit was built by a team of 4 software engineering students as part of the im
 - [ ] npm run seed
 ```
 
+```
+Create your own account or log in with this demo account:
+- email: cody@gmail.com
+- password: 123
+```
+
 💻 Technologies Used
 
 ➤ Front-end: React, Redux, HTML, CSS, Material-UI, Charts.js

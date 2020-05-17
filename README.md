@@ -35,3 +35,5 @@ Create your own account or log in with this demo account :
 ➤ Back-end: Node, Express, PostgreSQL, Sequelize
 
 ➤ Deployment/Testing: Heroku, Mocha/Chai, Enzyme
+
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/UoVMzSg"><a href="//imgur.com/a/UoVMzSg"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>

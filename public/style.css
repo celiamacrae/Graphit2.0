@@ -87,6 +87,10 @@ h3 {
   margin: 12px 0;
 }
 
+#demo {
+  text-align: center;
+}
+
 /* columns */
 
 .select {

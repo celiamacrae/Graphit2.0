@@ -6,7 +6,11 @@ import {gotParsedData, gotColumns} from '../store/data'
 import {gotUploadedFile} from '../store/upload'
 import {Button, Grid, Paper} from '@material-ui/core'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faUpload} from '@fortawesome/free-solid-svg-icons'
+import {faUpload, faFileCsv} from '@fortawesome/free-solid-svg-icons'
+import axios from 'axios'
+
+const DEMO_TYPE_1 = 'DEMO_TYPE_1'
+const DEMO_TYPE_2 = 'DEMO_TYPE_2'
 
 class Upload extends React.Component {
   constructor() {
@@ -16,8 +20,25 @@ class Upload extends React.Component {
     }
   }
 
+  requestDemoData = async event => {
+    let url = ''
+    switch (event) {
+      case DEMO_TYPE_1:
+        url = '/cerealnutrition.csv'
+        break
+      case DEMO_TYPE_2:
+        url = '/superbowlstats.csv'
+        break
+      default:
+        break
+    }
+    // read csv from URL location
+    const {data} = await axios.get(url)
+    this.handleFileUpload(data)
+  }
+
   handleFileUpload = event => {
-    const file = event.target.files[0]
+    const file = event.target ? event.target.files[0] : event
     this.setState({
       uploadedFile: file
     })
@@ -80,6 +101,22 @@ class Upload extends React.Component {
                 Choose File
               </Button>
             </label>
+          </Grid>
+        </Grid>
+        <hr />
+        <Grid item sm={12} className="fa-btn">
+          <Grid item>
+            <h2 id="demo">Or choose one of our sample CSV files: </h2>
+          </Grid>
+          <Grid container justify="center" alignItems="center" spacing={2}>
+            <Button onClick={event => this.requestDemoData(DEMO_TYPE_1, event)}>
+              <FontAwesomeIcon icon={faFileCsv} size="3x" /> Super Bowl
+            </Button>
+
+            <Button onClick={event => this.requestDemoData(DEMO_TYPE_1, event)}>
+              <FontAwesomeIcon icon={faFileCsv} size="3x" /> Cereal Nurtition
+              Data
+            </Button>
           </Grid>
         </Grid>
       </Paper>

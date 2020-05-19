@@ -106,7 +106,7 @@ class Upload extends React.Component {
         <hr />
         <Grid item sm={12} className="fa-btn">
           <Grid item>
-            <h2 id="demo">Or choose one of our sample CSV files: </h2>
+            <h3 id="demo">Or choose one of our sample CSV files: </h3>
           </Grid>
           <Grid container justify="center" alignItems="center" spacing={2}>
             <Button onClick={event => this.requestDemoData(DEMO_TYPE_1, event)}>
@@ -119,6 +119,7 @@ class Upload extends React.Component {
             </Button>
           </Grid>
         </Grid>
+        <br />
       </Paper>
     )
   }

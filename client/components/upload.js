@@ -20,22 +20,22 @@ class Upload extends React.Component {
     }
   }
 
-  requestDemoData = async event => {
-    let url = ''
-    switch (event) {
-      case DEMO_TYPE_1:
-        url = '/cerealnutrition.csv'
-        break
-      case DEMO_TYPE_2:
-        url = '/superbowlstats.csv'
-        break
-      default:
-        break
-    }
-    // read csv from URL location
-    const {data} = await axios.get(url)
-    this.handleFileUpload(data)
-  }
+  // requestDemoData = async event => {
+  //   let url = ''
+  //   switch (event) {
+  //     case DEMO_TYPE_1:
+  //       url = '/cerealnutrition.csv'
+  //       break
+  //     case DEMO_TYPE_2:
+  //       url = '/superbowlstats.csv'
+  //       break
+  //     default:
+  //       break
+  //   }
+  //   // read csv from URL location
+  //   const {data} = await axios.get(url)
+  //   this.handleFileUpload(data)
+  // }
 
   handleFileUpload = event => {
     const file = event.target ? event.target.files[0] : event
@@ -109,11 +109,13 @@ class Upload extends React.Component {
             <h3 id="demo">Or choose one of our sample CSV files: </h3>
           </Grid>
           <Grid container justify="center" alignItems="center" spacing={2}>
-            <Button onClick={event => this.requestDemoData(DEMO_TYPE_1, event)}>
+            {/* <Button onClick={event => this.requestDemoData(DEMO_TYPE_1, event)}> */}
+            <Button>
               <FontAwesomeIcon icon={faFileCsv} size="3x" /> Super Bowl
             </Button>
 
-            <Button onClick={event => this.requestDemoData(DEMO_TYPE_1, event)}>
+            {/* <Button onClick={event => this.requestDemoData(DEMO_TYPE_1, event)}> */}
+            <Button>
               <FontAwesomeIcon icon={faFileCsv} size="3x" /> Cereal Nurtition
               Data
             </Button>

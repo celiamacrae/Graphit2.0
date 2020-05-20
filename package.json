@@ -3,10 +3,11 @@
   "version": "2.0.0",
   "description": "Welcome to GraphIt! Graphit is a platform that transforms uploaded data from a non-technical user to “magically” produce the most appropriate graph in seconds.",
   "engines": {
-    "node": ">= 7.0.0"
+    "node": "12.x"
   },
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "build-client": "webpack",
     "build-client-watch": "webpack -w",
     "deploy": "script/deploy",

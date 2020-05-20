@@ -5,7 +5,7 @@ import Upload from './upload'
 import Columns from './columns'
 import {Grid} from '@material-ui/core'
 // import {columns} from '../store/data'
-import Pose from './Pose'
+import Pose from './pose'
 
 class Main extends Component {
   constructor(props) {

@@ -2,7 +2,7 @@
 
 Visit: https://graphit2.herokuapp.com/ 👀
 
-Graphit was built by a team of 4 software engineering students in 2020 as part of the immersive Grace Hopper Program at Fullstack Academy of Code, in New York City.
+Graphit was built by a team of 4 software engineering students in February 2020 as part of the immersive Grace Hopper Program at Fullstack Academy of Code, in New York City.
 
 ➤ Anastasiia Burlya
 
@@ -35,4 +35,3 @@ Create your own account or log in with this demo account :
 ➤ Back-end: Node, Express, PostgreSQL, Sequelize
 
 ➤ Deployment/Testing: Heroku, Mocha/Chai, Enzyme
-

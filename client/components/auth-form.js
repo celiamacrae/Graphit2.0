@@ -72,69 +72,71 @@ const SignupForm = props => {
   const {name, handleSubmit, error} = props
 
   return (
-    <div id="main">
-      <div className="card">
-        <div className="modal-login modal-box modal-signUp">
-          <form onSubmit={handleSubmit} name={name}>
-            <div className="modal-body">
-              <div>
-                <label htmlFor="firstName">
-                  <small>First Name</small>
-                </label>
-                <input
-                  name="firstName"
-                  type="text"
-                  placeholder="First Name"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="lastName">
-                  <small>Last Name</small>
-                </label>
-                <input
-                  name="lastName"
-                  type="text"
-                  placeholder="Last Name"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="email">
-                  <small>Email</small>
-                </label>
-                <input name="email" type="text" placeholder="Email" required />
-              </div>
-
-              <div>
-                <label htmlFor="password">
-                  <small>Password</small>
-                </label>
-                <input
-                  name="password"
-                  type="password"
-                  placeholder="Password"
-                  required
-                />
-              </div>
-
-              <div>
-                <button type="submit" className="btn">
-                  Signup
-                </button>
-                {/* <a href="/auth/google" className="btn">
-                  Sign Up in with Google+
-                </a> */}
-              </div>
-            </div>
-
-            {error && error.response && <div> {error.response.data} </div>}
-          </form>
-        </div>
-      </div>
-    </div>
+    <Grid container direction="column" justify="center" alignItems="center">
+      <Paper className="form" elevation={3}>
+        <Grid>
+          <Logo />
+        </Grid>
+        <form onSubmit={handleSubmit} name={name}>
+          <Grid
+            container
+            direction="column"
+            justify="center"
+            alignItems="center"
+            spacing={2}
+          >
+            <Grid item sm={12}>
+              <label htmlFor="firstName">First Name</label>
+              <TextField
+                name="firstName"
+                type="text"
+                variant="outlined"
+                size="small"
+              />
+            </Grid>
+            <Grid item sm={12}>
+              <label htmlFor="lastName">Last Name</label>
+              <TextField
+                name="lastName"
+                type="text"
+                variant="outlined"
+                size="small"
+              />
+            </Grid>
+            <Grid item sm={12}>
+              <label htmlFor="email">Email</label>
+              <TextField
+                name="email"
+                type="text"
+                variant="outlined"
+                size="small"
+              />
+            </Grid>
+            <Grid item sm={12}>
+              <label htmlFor="password">Password</label>
+              <TextField
+                name="password"
+                type="password"
+                variant="outlined"
+                size="small"
+              />
+            </Grid>
+            <Grid item sm={12}>
+              <Button variant="contained" type="submit" color="primary">
+                Signup
+              </Button>
+            </Grid>
+            {error &&
+              error.response && (
+                <Grid item sm={12}>
+                  {' '}
+                  {error.response.data}{' '}
+                </Grid>
+              )}
+          </Grid>
+        </form>
+      </Paper>
+    </Grid>
   )
 }
 

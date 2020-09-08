@@ -15,7 +15,13 @@ class Profile extends Component {
       <div className="page">
         <Grid item className="header" sm={12}>
           <Logo />
-          <h2>{this.props.user.firstName}, choose a graph to view:</h2>
+          {this.props.savedChart.myCharts.length > 0 ? (
+            <h2>{this.props.user.firstName}, choose a graph to view:</h2>
+          ) : (
+            <h2>
+              {this.props.user.firstName}, you don't have any saved graphs.
+            </h2>
+          )}
         </Grid>
         <div className="all-graphs">
           {this.props.savedChart.myCharts.map(chart => {

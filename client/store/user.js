@@ -56,7 +56,7 @@ export const createUser = user => async dispatch => {
 
   try {
     dispatch(getUser(res.data))
-    history.push('/user')
+    history.push('/profile')
   } catch (dispatchOrHistoryErr) {
     console.error(dispatchOrHistoryErr)
   }

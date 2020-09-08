@@ -129,8 +129,8 @@ const SignupForm = props => {
             {error &&
               error.response && (
                 <Grid item sm={12}>
-                  {' '}
-                  {error.response.data}{' '}
+                  {error &&
+                    error.response && <div> {error.response.data} </div>}
                 </Grid>
               )}
           </Grid>
